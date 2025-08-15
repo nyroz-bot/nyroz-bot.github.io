@@ -1,0 +1,150 @@
+body {
+  margin: 0;
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #0e0e0e;
+  color: #f1f1f1;
+  line-height: 1.7;
+}
+
+header {
+  background-color: #1c1c1c;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.7rem;
+  color: #4da6ff;
+}
+
+nav a {
+  color: #f1f1f1;
+  text-decoration: none;
+  margin-left: 1.2rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  background-color: transparent;
+  border: 1px solid transparent;
+}
+
+nav a:hover {
+  background-color: rgba(77, 166, 255, 0.1);
+  color: #4da6ff;
+  border-color: #4da6ff;
+}
+
+main {
+  padding: 2.5rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+h2, h3 {
+  color: #4da6ff;
+  margin-top: 2rem;
+  border-bottom: 1px solid #444;
+  padding-bottom: 0.3em;
+}
+
+ul {
+  padding-left: 1.5rem;
+  list-style-type: disc;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+a {
+  color: #4da6ff;
+  transition: color 0.2s;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #7fbfff;
+}
+
+.hero {
+  text-align: center;
+  padding: 5rem 2rem 4rem;
+  background: linear-gradient(to right, #141414, #1e1e1e);
+}
+
+.hero h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  max-width: 600px;
+  margin: 0 auto 2rem auto;
+  color: #ccc;
+}
+
+.hero a.button {
+  display: inline-block;
+  background-color: #4da6ff;
+  color: #0e0e0e;
+  padding: 0.9rem 1.8rem;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 24px rgba(77, 166, 255, 0.25);
+}
+
+.hero a.button:hover {
+  background-color: #358de0;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(77, 166, 255, 0.4);
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 4rem 2rem;
+}
+
+.card {
+  background-color: #1c1c1c;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 24px rgba(77, 166, 255, 0.4);
+}
+
+.card h3 {
+  color: #4da6ff;
+  margin-bottom: 0.7rem;
+  font-size: 1.3rem;
+}
+
+.card p {
+  font-size: 1rem;
+  color: #ccc;
+  line-height: 1.5;
+}
