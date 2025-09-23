@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nyroz Bot — Commands</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
@@ -18,7 +18,19 @@
   </header>
 
   <main>
-    <section class="hero">
-      <h2>📖 Command List</h2>
-      <p>This page is currently under development. Check back soon for a full list of Nyroz commands!</p>
-    </section>
+    <h2>⚙️ Commands</h2>
+
+    <!-- Tabs -->
+    <div class="tabs" id="tabs"></div>
+
+    <!-- Search -->
+    <div class="search-bar">
+      <input type="text" id="search" placeholder="🔍 Search commands...">
+    </div>
+
+    <!-- Commands grid -->
+    <div class="commands-grid" id="commands-container"></div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
