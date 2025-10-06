@@ -3,46 +3,46 @@
     "name": "config",
     "category": "Utility",
     "description": "Configure the giveaway win message as well as the automatic support role",
-    "syntax": "+config",
+    "syntax": "{prefix}config",
     "permissions": ["Administrator"],
-    "examples": ["+config"],
+    "examples": ["{prefix}config"],
     "images": []
   },
   {
     "name": "disable",
     "category": "Utility",
     "description": "Restrict a command to administrators only",
-    "syntax": "+disable <command>",
+    "syntax": "{prefix}disable <command>",
     "permissions": ["Administrator"],
-    "examples": ["+disable snipe"],
+    "examples": ["{prefix}disable snipe"],
     "images": []
   },
   {
     "name": "enable",
     "category": "Utility",
     "description": "Allow all server members to use a command",
-    "syntax": "+enable <command>",
+    "syntax": "{prefix}enable <command>",
     "permissions": ["Administrator"],
-    "examples": ["+enable snipe"],
+    "examples": ["{prefix}enable snipe"],
     "images": []
   },
   {
     "name": "rolereaction",
     "category": "Utility",
     "description": "Create and config a role reaction message",
-    "syntax": "+rolereaction",
+    "syntax": "{prefix}rolereaction",
     "permissions": ["Administrator"],
-    "examples": ["+rolereaction"],
+    "examples": ["{prefix}rolereaction"],
     "images": []
   },
   {
     "name": "autorole",
     "category": "Utility",
     "description": "Configure roles to be automatically added to members who join the server",
-    "syntax": "+autorole",
+    "syntax": "{prefix}autorole",
     "permissions": ["Administrator"],
     "examples": [
-      "+autorole"
+      "{prefix}autorole"
     ],
     "images": []
   },
@@ -50,11 +50,11 @@
     "name": "antilink",
     "category": "Utility",
     "description": "Enable or disable automatic deletion of links sent by non-admin users",
-    "syntax": "+antilink <state>",
+    "syntax": "{prefix}antilink <state>",
     "permissions": ["Administrator"],
     "examples": [
-      "+antilink",
-      "+antilink on"
+      "{prefix}antilink",
+      "{prefix}antilink on"
     ],
     "images": []
   },
@@ -62,11 +62,11 @@
     "name": "prefix",
     "category": "Utility",
     "description": "Change the bot's prefix",
-    "syntax": "+prefix <new_prefix>",
+    "syntax": "{prefix}prefix <new_prefix>",
     "permissions": ["Administrator"],
     "examples": [
-      "+prefix ?",
-      "+prefix n!"
+      "{prefix}prefix ?",
+      "{prefix}prefix n!"
     ],
     "images": []
   },
@@ -74,30 +74,30 @@
     "name": "embed",
     "category": "Utility",
     "description": "Create a custom embed",
-    "syntax": "+embed",
+    "syntax": "{prefix}embed",
     "permissions": ["Manage Guild"],
-    "examples": ["+embed"],
+    "examples": ["{prefix}embed"],
     "images": []
   },
   {
     "name": "purge / clear",
     "category": "Utility",
     "description": "Delete a selected number of messages in the channel",
-    "syntax": "+purge <amount>",
+    "syntax": "{prefix}purge <amount>",
     "permissions": ["Manage Messages"],
     "examples": [
-      "+purge 10"],
+      "{prefix}purge 10"],
     "images": []
   },
   {
     "name": "clean",
     "category": "Utility",
     "description": "deletes a selected quantity or all of a user's messages",
-    "syntax": "+clean <user> <amount>",
+    "syntax": "{prefix}clean <user> <amount>",
     "permissions": ["Manage Messages"],
     "examples": [
-      "+clean @nyroz",
-      "+clean 1374134010397065426 100"
+      "{prefix}clean @nyroz",
+      "{prefix}clean 1374134010397065426 100"
     ],
     "images": []
   },
@@ -105,11 +105,11 @@
     "name": "dm",
     "category": "Utility",
     "description": "Send a DM to a user via the bot",
-    "syntax": "+dm <user> <message>",
+    "syntax": "{prefix}dm <user> <message>",
     "permissions": ["Administrator"],
     "examples": [
-      "+dm @nyroz Hello, how are you?",
-      "+dm 1374134010397065426 Hello world!"
+      "{prefix}dm @nyroz Hello, how are you?",
+      "{prefix}dm 1374134010397065426 Hello world!"
     ],
     "images": []
   },
@@ -117,10 +117,10 @@
     "name": "say",
     "category": "Utility",
     "description": "Send a message in the channel via the bot",
-    "syntax": "+say <message>",
+    "syntax": "{prefix}say <message>",
     "permissions": ["Administrator"],
     "examples": [
-      "+say \"Hello how are you?\""
+      "{prefix}say \"Hello how are you?\""
     ],
     "images": []
   },
@@ -128,10 +128,10 @@
     "name": "membercount / mc",
     "category": "Utility",
     "description": "Shows server member statistics",
-    "syntax": "+membercount",
+    "syntax": "{prefix}membercount",
     "permissions": [],
     "examples": [
-      "+membercount"
+      "{prefix}membercount"
     ],
     "images": []
   },
@@ -139,11 +139,11 @@
     "name": "steal",
     "category": "Utility",
     "description": "Add an emoji to the server",
-    "syntax": ["+steal <name> :emoji:", "+steal <name> with an attached file"],
+    "syntax": ["{prefix}steal <name> :emoji:", "{prefix}steal <name> with an attached file"],
     "permissions": ["Manage Emojis"],
     "examples": [
-      "+steal coolemoji :starwarswave:",
-      "+steal emoji.jpg"
+      "{prefix}steal coolemoji :starwarswave:",
+      "{prefix}steal emoji.jpg"
     ],
     "images": []
   },
@@ -158,11 +158,11 @@
     "name": "timer",
     "category": "Miscellaneous",
     "description": "Displays a countdown",
-    "syntax": "+timer <duration> <name>",
+    "syntax": "{prefix}timer <duration> <name>",
     "permissions": ["Manage Guild"],
     "examples": [
-      "+timer 1h30m OPENING",
-      "+timer 10d"
+      "{prefix}timer 1h30m OPENING",
+      "{prefix}timer 10d"
     ],
     "images": []
   },
@@ -170,12 +170,45 @@
     "name": "snipe",
     "category": "Miscellaneous",
     "description": "Shows the last deleted messages in the channel",
-    "syntax": ["+snipe <amount>", "+snipe all"],
+    "syntax": ["{prefix}snipe <amount>", "{prefix}snipe all"],
     "permissions": ["Member", "Administrator"],
     "examples": [
-      "+snipe all",
-      "+snipe 2",
-      "+snipe"
+      "{prefix}snipe all",
+      "{prefix}snipe 2",
+      "{prefix}snipe"
+    ],
+    "images": []
+  },
+  {
+    "name": "commands",
+    "category": "Miscellaneous",
+    "description": "Shows a list of all bot commands.",
+    "syntax": "{prefix}commands",
+    "permissions": [],
+    "examples": [
+      "{prefix}commands"
+    ],
+    "images": []
+  },
+  {
+    "name": "vote",
+    "category": "Miscellaneous",
+    "description": "Support Nyroz by voting for us! Every vote helps us grow and reach more users.",
+    "syntax": "{prefix}vote",
+    "permissions": [],
+    "examples": [
+      "{prefix}vote"
+    ],
+    "images": []
+  },
+  {
+    "name": "review",
+    "category": "Miscellaneous",
+    "description": "Do you enjoy using Nyroz? Let us know what you think! Share your feedback, suggestions, or comments.",
+    "syntax": "{prefix}review",
+    "permissions": [],
+    "examples": [
+      "{prefix}review"
     ],
     "images": []
   },
@@ -183,22 +216,22 @@
     "name": "translate",
     "category": "Miscellaneous",
     "description": "Translates text from an automatically detected language into a target language",
-    "syntax": "+translate <target_language> <text>",
+    "syntax": "{prefix}translate <target_language> <text>",
     "permissions": [],
     "examples": [
-      "+translate fr Hi, i wanna talk to you",
-      "+translate [when replying to a message]"
+      "{prefix}translate fr Hi, i wanna talk to you",
+      "{prefix}translate [when replying to a message]"
     ],
     "images": []
   },
   {
     "name": "status",
     "category": "Miscellaneous",
-    "description": "Count the number of membre in the server with the server vanity in status (vanity can be set with the +config command)",
-    "syntax": "+status",
+    "description": "Count the number of membre in the server with the server vanity in status (vanity can be set with the {prefix}config command)",
+    "syntax": "{prefix}status",
     "permissions": ["Manage Guild"],
     "examples": [
-      "+status"
+      "{prefix}status"
     ],
     "images": []
   },
@@ -206,11 +239,11 @@
     "name": "userinfo",
     "category": "Miscellaneous",
     "description": "Displays a user's account information",
-    "syntax": "+userinfo <user>",
+    "syntax": "{prefix}userinfo <user>",
     "permissions": [],
     "examples": [
-      "+userinfo @nyroz",
-      "+userinfo 1374134010397065426"
+      "{prefix}userinfo @nyroz",
+      "{prefix}userinfo 1374134010397065426"
     ],
     "images": []
   },
@@ -218,10 +251,10 @@
     "name": "serverinfo",
     "category": "Miscellaneous",
     "description": "Displays server information",
-    "syntax": "+serverinfo",
+    "syntax": "{prefix}serverinfo",
     "permissions": [],
     "examples": [
-      "+serverinfo"
+      "{prefix}serverinfo"
     ],
     "images": []
   },
@@ -229,11 +262,11 @@
     "name": "avatar",
     "category": "Miscellaneous",
     "description": "Displays a user's profile picture",
-    "syntax": "+avatar <user>",
+    "syntax": "{prefix}avatar <user>",
     "permissions": [],
     "examples": [
-      "+avatar @nyroz",
-      "+avatar 1374134010397065426"
+      "{prefix}avatar @nyroz",
+      "{prefix}avatar 1374134010397065426"
     ],
     "images": []
   },
@@ -241,11 +274,11 @@
     "name": "banner",
     "category": "Miscellaneous",
     "description": "Displays a user's banner if they have one",
-    "syntax": "+banner <user>",
+    "syntax": "{prefix}banner <user>",
     "permissions": [],
     "examples": [
-      "+banner @nyroz",
-      "+banner 1374134010397065426"
+      "{prefix}banner @nyroz",
+      "{prefix}banner 1374134010397065426"
     ],
     "images": []
   },
@@ -253,11 +286,11 @@
     "name": "afk",
     "category": "Miscellaneous",
     "description": "Activate AFK mode. When a user mentions you, they will be informed that you are AFK. When you come back, you will have a list of all the messages you received.",
-    "syntax": "+afk <reason>",
+    "syntax": "{prefix}afk <reason>",
     "permissions": [],
     "examples": [
-      "+afk I'll be back in 1h",
-      "+afk"
+      "{prefix}afk I'll be back in 1h",
+      "{prefix}afk"
     ],
     "images": []
   },
@@ -265,11 +298,11 @@
     "name": "help",
     "category": "Miscellaneous",
     "description": "Displays the classic help embed",
-    "syntax": "+help <command>",
+    "syntax": "{prefix}help <command>",
     "permissions": [],
     "examples": [
-      "+help",
-      "+help snipe"
+      "{prefix}help",
+      "{prefix}help snipe"
     ],
     "images": []
   },
@@ -277,10 +310,10 @@
     "name": "commands",
     "category": "Miscellaneous",
     "description": "Shows a list of all bot commands",
-    "syntax": "+commands",
+    "syntax": "{prefix}commands",
     "permissions": [],
     "examples": [
-      "+commands"
+      "{prefix}commands"
     ],
     "images": []
   },
@@ -288,10 +321,10 @@
     "name": "uptime",
     "category": "Miscellaneous",
     "description": "Displays the bot's uptime",
-    "syntax": "+uptime",
+    "syntax": "{prefix}uptime",
     "permissions": [],
     "examples": [
-      "+uptime"
+      "{prefix}uptime"
     ],
     "images": []
   },
@@ -303,11 +336,11 @@
     "name": "ban",
     "category": "Moderation",
     "description": "Bans a member from the server",
-    "syntax": "+ban <user>",
+    "syntax": "{prefix}ban <user>",
     "permissions": ["Ban Members"],
     "examples": [
-      "+ban @nyroz",
-      "+ban 1374134010397065426"
+      "{prefix}ban @nyroz",
+      "{prefix}ban 1374134010397065426"
     ],
     "images": []
   },
@@ -315,10 +348,10 @@
     "name": "unbanall",
     "category": "Moderation",
     "description": "Unban all banned members from the server",
-    "syntax": "+unbanall",
+    "syntax": "{prefix}unbanall",
     "permissions": ["Ban Members"],
     "examples": [
-      "+unbanall"
+      "{prefix}unbanall"
     ],
     "images": []
   },
@@ -326,11 +359,11 @@
     "name": "kick",
     "category": "Moderation",
     "description": "Kicks a member from the server",
-    "syntax": "+kick <user>",
+    "syntax": "{prefix}kick <user>",
     "permissions": ["Kick Members"],
     "examples": [
-      "+kick @nyroz",
-      "+kick 1374134010397065426"
+      "{prefix}kick @nyroz",
+      "{prefix}kick 1374134010397065426"
     ],
     "images": []
   },
@@ -338,10 +371,10 @@
     "name": "unban",
     "category": "Moderation",
     "description": "Unbans a member from the server",
-    "syntax": "+unban <user>",
+    "syntax": "{prefix}unban <user>",
     "permissions": ["Ban Members"],
     "examples": [
-      "+unban 1374134010397065426"
+      "{prefix}unban 1374134010397065426"
     ],
     "images": []
   },
@@ -349,12 +382,12 @@
     "name": "mute",
     "category": "Moderation",
     "description": "Mutes a member so they can no longer talk on the server",
-    "syntax": "+mute <user> <time> <reason>",
+    "syntax": "{prefix}mute <user> <time> <reason>",
     "permissions": ["Moderate Members"],
     "examples": [
-      "+mute 1374134010397065426",
-      "+mute @nyroz 3h30m He is beautiful",
-      "+mute @nyroz He is ugly"
+      "{prefix}mute 1374134010397065426",
+      "{prefix}mute @nyroz 3h30m He is beautiful",
+      "{prefix}mute @nyroz He is ugly"
     ],
     "images": []
   },
@@ -362,11 +395,11 @@
     "name": "unmute",
     "category": "Moderation",
     "description": "Unmutes a member so he can talk again on the server",
-    "syntax": "+unmute <user> <reason>",
+    "syntax": "{prefix}unmute <user> <reason>",
     "permissions": ["Moderate Members"],
     "examples": [
-      "+unmute 1374134010397065426",
-      "+unmute @nyroz I did an error by muting you"
+      "{prefix}unmute 1374134010397065426",
+      "{prefix}unmute @nyroz I did an error by muting you"
     ],
     "images": []
   },
@@ -374,11 +407,11 @@
     "name": "setnick",
     "category": "Moderation",
     "description": "Changes a member's nickname on the server",
-    "syntax": "+setnick <user> <new_nickname>",
+    "syntax": "{prefix}setnick <user> <new_nickname>",
     "permissions": ["Manage Nicknames"],
     "examples": [
-      "+setnick 1374134010397065426 Dark Castor",
-      "+setnick @nyroz Luke Skywalker"
+      "{prefix}setnick 1374134010397065426 Dark Castor",
+      "{prefix}setnick @nyroz Luke Skywalker"
     ],
     "images": []
   },
@@ -390,11 +423,11 @@
     "name": "gstart",
     "category": "Giveaways",
     "description": "Starts a new giveaway in the current channel",
-    "syntax": "+gstart <duration> [winners] <prize>",
+    "syntax": "{prefix}gstart <duration> [winners] <prize>",
     "permissions": ["Manage Server / \"Giveaways\" role"],
     "examples": [
-      "+gstart 10m 5$",
-      "+gstart 1h30m 2 Nitro Boost"
+      "{prefix}gstart 10m 5$",
+      "{prefix}gstart 1h30m 2 Nitro Boost"
     ],
     "images": []
   },
@@ -402,11 +435,11 @@
     "name": "gend",
     "category": "Giveaways",
     "description": "Instantly complete a giveaway",
-    "syntax": "+gend <giveaway_message_id>",
+    "syntax": "{prefix}gend <giveaway_message_id>",
     "permissions": ["Manage Server / \"Giveaways\" role"],
     "examples": [
-      "+gend",
-      "+gend 1419312083194871931"
+      "{prefix}gend",
+      "{prefix}gend 1419312083194871931"
     ],
     "images": []
   },
@@ -414,11 +447,11 @@
     "name": "greroll",
     "category": "Giveaways",
     "description": "Picks another giveaway participant",
-    "syntax": "+greroll <giveaway_message_id>",
+    "syntax": "{prefix}greroll <giveaway_message_id>",
     "permissions": ["Manage Server / \"Giveaways\" role"],
     "examples": [
-      "+greroll",
-      "+greroll 1419312083194871931"
+      "{prefix}greroll",
+      "{prefix}greroll 1419312083194871931"
     ],
     "images": []
   },
@@ -426,12 +459,12 @@
     "name": "claimtime",
     "category": "Giveaways",
     "description": "Allows you to view a member's claimtime or modify a role's claimtime",
-    "syntax": "+claimtime <user>",
+    "syntax": "{prefix}claimtime <user>",
     "permissions": [],
     "examples": [
-      "+claimtime",
-      "+claimtime @nyroz",
-      "+claimtime set 1382395488673988658 20s"
+      "{prefix}claimtime",
+      "{prefix}claimtime @nyroz",
+      "{prefix}claimtime set 1382395488673988658 20s"
     ],
     "images": []
   },
@@ -439,11 +472,11 @@
     "name": "wins",
     "category": "Giveaways",
     "description": "View a member's giveaway win count",
-    "syntax": "+wins <user>",
+    "syntax": "{prefix}wins <user>",
     "permissions": [],
     "examples": [
-      "+wins",
-      "+wins @nyroz"
+      "{prefix}wins",
+      "{prefix}wins @nyroz"
     ],
     "images": []
   },
@@ -455,11 +488,11 @@
     "name": "nuke",
     "category": "Channels",
     "description": "Deletes and recreates a channel, removing all messages and mentions",
-    "syntax": "+nuke <channel>",
+    "syntax": "{prefix}nuke <channel>",
     "permissions": ["Manage Channels"],
     "examples": [
-      "+nuke",
-      "+nuke #giveaway"
+      "{prefix}nuke",
+      "{prefix}nuke #giveaway"
     ],
     "images": []
   },
@@ -467,11 +500,11 @@
     "name": "hide",
     "category": "Channels",
     "description": "Hides a channel so that only admins can see it",
-    "syntax": "+hide <channel>",
+    "syntax": "{prefix}hide <channel>",
     "permissions": ["Manage Channels"],
     "examples": [
-      "+hide",
-      "+hide #chat"
+      "{prefix}hide",
+      "{prefix}hide #chat"
     ],
     "images": []
   },
@@ -479,11 +512,11 @@
     "name": "unhide",
     "category": "Channels",
     "description": "Unhides a channel so that everyone can see it",
-    "syntax": "+unhide <channel>",
+    "syntax": "{prefix}unhide <channel>",
     "permissions": ["Manage Channels"],
     "examples": [
-      "+unhide",
-      "+unhide #chat"
+      "{prefix}unhide",
+      "{prefix}unhide #chat"
     ],
     "images": []
   },
@@ -491,11 +524,11 @@
     "name": "lock",
     "category": "Channels",
     "description": "Locks a channel so that only admins can write in it",
-    "syntax": "+lock <channel>",
+    "syntax": "{prefix}lock <channel>",
     "permissions": ["Manage Channels"],
     "examples": [
-      "+lock",
-      "+lock #chat"
+      "{prefix}lock",
+      "{prefix}lock #chat"
     ],
     "images": []
   },
@@ -503,11 +536,11 @@
     "name": "unlock",
     "category": "Channels",
     "description": "Unlocks a channel so that everyone can write in it",
-    "syntax": "+unlock <channel>",
+    "syntax": "{prefix}unlock <channel>",
     "permissions": ["Manage Channels"],
     "examples": [
-      "+unlock",
-      "+unlock #chat"
+      "{prefix}unlock",
+      "{prefix}unlock #chat"
     ],
     "images": []
   },
@@ -515,11 +548,11 @@
     "name": "rename",
     "category": "Channels",
     "description": "Changes the name of the channel",
-    "syntax": "+rename <channel> <new_name>",
+    "syntax": "{prefix}rename <channel> <new_name>",
     "permissions": ["Manage Channels"],
     "examples": [
-      "+rename commands",
-      "+rename #cmd commands"
+      "{prefix}rename commands",
+      "{prefix}rename #cmd commands"
     ],
     "images": []
   },
@@ -527,11 +560,11 @@
     "name": "clone",
     "category": "Channels",
     "description": "Creates a copy of the channel",
-    "syntax": "+clone <channel>",
+    "syntax": "{prefix}clone <channel>",
     "permissions": ["Manage Channels"],
     "examples": [
-      "+clone",
-      "+clone #chat"
+      "{prefix}clone",
+      "{prefix}clone #chat"
     ],
     "images": []
   },
@@ -539,11 +572,11 @@
     "name": "greet",
     "category": "Channels",
     "description": "Enables or disables the feature that ghost pings new members in the targeted channel",
-    "syntax": "+greet <channel>",
+    "syntax": "{prefix}greet <channel>",
     "permissions": ["Administrator"],
     "examples": [
-      "+greet",
-      "+greet #rules"
+      "{prefix}greet",
+      "{prefix}greet #rules"
     ],
     "images": []
   },
@@ -554,23 +587,25 @@
     "name": "messages",
     "category": "Message Counting",
     "description": "See the number of messages sent by a user on the server",
-    "syntax": "+messages <user>",
+    "syntax": "{prefix}messages <user>",
     "permissions": [],
     "examples": [
-      "+messages @nyroz",
-      "+messages"
+      "{prefix}messages @nyroz",
+      "{prefix}messages"
     ],
     "images": []
   },
   {
-    "name": "leaderboard",
+    "name": "leaderboard messages",
     "category": "Message Counting",
     "description": "See the top message senders on the server",
-    "syntax": ["+leaderboard <type>"],
+    "syntax": ["{prefix}leaderboard messages <type>"],
     "permissions": [],
     "examples": [
-      "+leaderboard",
-      "+leaderboard daily"
+      "{prefix}leaderboard messages ",
+      "{prefix}leaderboard msgs daily",
+      "{prefix}leaderboard invites",
+      "{prefix}leaderboard"
     ],
     "images": []
   },
@@ -578,11 +613,11 @@
     "name": "addmessages",
     "category": "Message Counting",
     "description": "Add a number of messages to a member",
-    "syntax": ["+addmessages <user> <amount>"],
+    "syntax": ["{prefix}addmessages <user> <amount>"],
     "permissions": ["Administrator"],
     "examples": [
-      "+addmessages @nyroz 50",
-      "+addmessages 1374134010397065426 50"
+      "{prefix}addmessages @nyroz 50",
+      "{prefix}addmessages 1374134010397065426 50"
     ],
     "images": []
   },
@@ -590,11 +625,11 @@
     "name": "removemessages",
     "category": "Message Counting",
     "description": "Remove a number of messages from a member",
-    "syntax": ["+removemessages <user> <amount>"],
+    "syntax": ["{prefix}removemessages <user> <amount>"],
     "permissions": ["Administrator"],
     "examples": [
-      "+removemessages @nyroz 50",
-      "+removemessages 1374134010397065426 50"
+      "{prefix}removemessages @nyroz 50",
+      "{prefix}removemessages 1374134010397065426 50"
     ],
     "images": []
   },
@@ -602,11 +637,11 @@
     "name": "messagetracking",
     "category": "Message Counting",
     "description": "Enable or disable the message counter system on the server",
-    "syntax": "+messagetracking <state>",
+    "syntax": "{prefix}messagetracking <state>",
     "permissions": ["Administrator"],
     "examples": [
-      "+messagetracking",
-      "+messagetracking off"
+      "{prefix}messagetracking",
+      "{prefix}messagetracking off"
     ],
     "images": []
   },
@@ -614,13 +649,103 @@
     "name": "resetmessages",
     "category": "Message Counting",
     "description": "Reset the number of messages from one member or all members of the server to 0",
-    "syntax": ["+resetmessages <user>", "+resetmessages all"],
+    "syntax": ["{prefix}resetmessages <user>", "{prefix}resetmessages all"],
     "permissions": ["Administrator"],
     "examples": [
-      "+resetmessages @nyroz",
-      "+resetmessages all"
+      "{prefix}resetmessages @nyroz",
+      "{prefix}resetmessages all"
     ],
     "images": []
-  }
+  },
+
+
+
+{
+  "name": "invites",
+  "category": "Invite Tracking",
+  "description": "See the invite stats of a user on the server.",
+  "syntax": ["{prefix}invites <user>", "{prefix}invites"],
+  "permissions": [],
+  "examples": [
+    "{prefix}invites @nyroz",
+    "{prefix}invites"
+  ],
+  "images": []
+},
+{
+  "name": "inviter",
+  "category": "Invite Tracking",
+  "description": "See who invited a user to the server.",
+  "syntax": ["{prefix}inviter <user>", "{prefix}inviter"],
+  "permissions": [],
+  "examples": [
+    "{prefix}inviter @nyroz",
+    "{prefix}inviter"
+  ],
+  "images": []
+},
+{
+  "name": "addinvites",
+  "category": "Invite Tracking",
+  "description": "Add bonus invites to a member.",
+  "syntax": ["{prefix}addinvites <user> <amount>"],
+  "permissions": ["Administrator"],
+  "examples": [
+    "{prefix}addinvites @nyroz 5",
+    "{prefix}addinvites 1374134010397065426 10"
+  ],
+  "images": []
+},
+{
+  "name": "removeinvites",
+  "category": "Invite Tracking",
+  "description": "Remove bonus invites from a member.",
+  "syntax": ["{prefix}removeinvites <user> <amount>"],
+  "permissions": ["Administrator"],
+  "examples": [
+    "{prefix}removeinvites @nyroz 5",
+    "{prefix}removeinvites 1374134010397065426 10"
+  ],
+  "images": []
+},
+{
+  "name": "resetinvites",
+  "category": "Invite Tracking",
+  "description": "Reset the number of invites from one member or all members of the server to 0 (confirmation required).",
+  "syntax": ["{prefix}resetinvites <user>", "{prefix}resetinvites all"],
+  "permissions": ["Administrator"],
+  "examples": [
+    "{prefix}resetinvites @nyroz",
+    "{prefix}resetinvites all"
+  ],
+  "images": []
+},
+{
+  "name": "leaderboard invites",
+  "category": "Invite Tracking",
+  "description": "See the top inviters on the server.",
+  "syntax": ["{prefix}leaderboard", "{prefix}leaderboard invites"],
+  "permissions": [],
+  "examples": [
+    "{prefix}leaderboard",
+    "{prefix}leaderboard msgs",
+    "{prefix}leaderboard messages daily",
+    "{prefix}leaderboard invites"
+  ],
+  "images": []
+},
+{
+  "name": "invited",
+  "category": "Invite Tracking",
+  "description": "See the list of members invited by a user who are still in the server.",
+  "syntax": ["{prefix}invited <user>", "{prefix}invited"],
+  "permissions": [],
+  "examples": [
+    "{prefix}invited @nyroz",
+    "{prefix}invited"
+  ],
+  "images": []
+}
+
 
 ]
